@@ -7,13 +7,13 @@ Twoim zadaniem jest zaimplementowanie zdefiniowanego poniżej API.
 
 Ze względu na to, że interesuje nas przede wszystkim tematyka baz danych kolejne wywołania funkcji API należy wczytywać ze standardowego wejścia.
 
-## Opis problemu
+## Opis systemu
 
 Partia prowadzi rejestr działań rządowych i samorządowych, które wspiera lub przeciw którym protestuje.
 
 Partią zarządza zespół liderów będących członkami partii.
 
-Członkowie partii mogą proponować akcje, głosować za i przeciw ich prowadzeniu, a także przesyłać materiały (nagrania, sprawozdania) z odbytych akcji.
+Członkowie partii mogą proponować akcje oraz głosować za i przeciw ich prowadzeniu.
 
 Członkiem partii zostaje się poprzez aktywny udział w jej życiu. Po roku nieaktywności, rozumianej jako brak wywołań funkcji API autoryzowanych danymi danej osoby, traci się prawa członka partii, a takie konto jest trwale zamrażane (tzn. dany członek nie może wykonać żadnej czynności, ale wszystkie informacje na jego temat są dalej przechowywane i raportowane). Zasada ta dotyczy wszystkich członków partii, również liderów (nie należy się martwić o to co się dzieje z partią po zamrożeniu wszystkich liderów).
 
