@@ -1,4 +1,5 @@
 Zasady przyznawania punktów bonusowych: https://github.com/piotrekiiuwr/bd2019-projekt/blob/master/README.md
+Basic-writing-and-formatting-syntax: https://help.github.com/en/articles/basic-writing-and-formatting-syntax
 
 # Projekt: System Zarządzania Partią Polityczną.
 
