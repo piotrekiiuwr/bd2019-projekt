@@ -2,11 +2,11 @@
 
 Specyfikacja projektu do przedmiotu BD2019 prowadzonego w Instytucie Informatyki UWr znajduje się w pliku https://github.com/piotrekiiuwr/bd2019-projekt/blob/master/projekt.md
 
-Ogłaszam możliwość otrzymania punktów bonusowych za zgłaszane uwagi do projektu. Uwagi zgłaszamy w postaci pull-requesta do mojego repozytorium na githubie.
+Ogłaszam możliwość otrzymania punktów bonusowych za zgłaszane uwagi do projektu. Uwagi zgłaszamy w postaci pull-requesta do mojego repozytorium na githubie lub jako issue jeśli problem jest bardziej skomplikowany i znalezienie rozwiązania wymaga uzgodnienia.
 
-Za uwagi, które wg mojej subiektywnej opinii będą pomocne oferuję bonus do 10% maksa z teorii/sql/projektu (wg wyboru studenta - wybór proszę dospecyfikować w opisie pull - requesta).
+Za uwagi, które wg mojej subiektywnej opinii będą pomocne oferuję bonus do 10% maksa z teorii/sql/projektu (wg wyboru studenta - wybór proszę dospecyfikować w opisie pull - requesta/issue w postaci pojedynczej linii (ostatniej we wpisie) zawierającej jedną z opcji: teoria/sql/projekt).
 
-Dokładna wysokość bonusa zależy od wagi problemu, który koryguje oraz terminu zgłoszenia (im szybciej tym łatwiej będzie mi je uwzględnić). Bonus będzie przyznawany łącznie za wszystkie uwagi zgłoszone do dnia 19 maja włącznie (limit 10% dotyczy łącznie wszystkich uwag zgłoszonych przez pojedynczego studenta, punkty dostaje wyłącznie pierwsza osoba zgłaszająca dany problem).
+Dokładna wysokość bonusa zależy od wagi problemu, który koryguje oraz terminu zgłoszenia (im szybciej tym łatwiej będzie mi je uwzględnić). Bonus będzie przyznawany łącznie za wszystkie uwagi zgłoszone do dnia 19 maja włącznie (limit 10% dotyczy łącznie wszystkich uwag zgłoszonych przez pojedynczego studenta, punkty może dostać  pierwsza osoba zgłaszająca dany problem i pierwsza proponująca sensowną wersję rozwiązania).
 
 Jak używać git-a oraz github-a można nauczyć się tutaj: https://guides.github.com/
 W szczególności należy zapoznać się z poradnikami: 
