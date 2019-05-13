@@ -4,7 +4,7 @@ Specyfikacja projektu do przedmiotu BD2019 prowadzonego w Instytucie Informatyki
 
 Ogłaszam możliwość otrzymania punktów bonusowych za zgłaszane uwagi do projektu. Uwagi zgłaszamy w postaci pull-requesta do mojego repozytorium na githubie.
 
-Za ew. uwagi, które wg mojej subiektywnej opinii będą pomocne oferuję bonus do 10% maksa z teorii/sql/projektu (wg wyboru studenta - wybór proszę dospecyfikować w opisie pull - requesta).
+Za uwagi, które wg mojej subiektywnej opinii będą pomocne oferuję bonus do 10% maksa z teorii/sql/projektu (wg wyboru studenta - wybór proszę dospecyfikować w opisie pull - requesta).
 
 Dokładna wysokość bonusa zależy od wagi problemu, który koryguje oraz terminu zgłoszenia (im szybciej tym łatwiej będzie mi je uwzględnić). Bonus będzie przyznawany łącznie za wszystkie uwagi zgłoszone do dnia 19 maja włącznie (limit 10% dotyczy łącznie wszystkich uwag zgłoszonych przez pojedynczego studenta, punkty dostaje wyłącznie pierwsza osoba zgłaszająca dany problem).
 
