@@ -221,12 +221,12 @@ projects <timestamp> <member> <passwd> [ authority ]
 ```
 
 Zwraca listę wszystkich działań wraz z id organu władzy prowadzącego dane działanie.
-* Jeśli `<authority>` jest podane to zwraca wyłącznie akcje dotyczące działań danego `<authority>`
+* Jeśli `<authority>` jest podane to zwraca wyłącznie działania podanego `<authority>`
 * `<passwd>` to hasło członka `<member>` będącego liderem.
 
 Atrybuty zwracanych krotek, krotki muszą być posortowane wg `<project>` rosnąco
 ```
-// <project> <authority> <actions>
+// <project> <authority>
 ```
 
 ###### votes
