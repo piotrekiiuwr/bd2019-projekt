@@ -25,7 +25,7 @@ Twój program po uruchomieniu powinien przeczytać ze standardowego wejścia ci�
 
 Wszystkie dane powinny być przechowywane w bazie danych, efekt działania każdej funkcji modyfikującej bazę, dla której wypisano potwierdzenie wykonania (wartość OK) powinien być utrwalony. Program będzie uruchamiany wielokrotnie z następującymi parametrami:
 
-- pierwsze uruchomienie - program wywołany z parametrem --init
+- pierwsze uruchomienie - program wywołany z parametrem `--init`
 
 Wejście zawiera w pierwszym wierszu wywołanie funkcji open z następującymi danymi login: init, password: qwerty, w kolejnych wierszach wywołania funkcji leader.
 
@@ -33,7 +33,7 @@ Wejście zawiera w pierwszym wierszu wywołanie funkcji open z następującymi d
 
 Wejście zawiera w pierwszym wierszu wywołanie funkcji open z następującymi danymi login: app, password: qwerty, a następnie wywołania dowolnych funkcji API za wyjątkiem funkcji open i leader.
 
-## Nota Bene
+## Dodatkowe informacje i założenia 
 - Można założyć, że przed uruchomieniem z parametrem --init baza nie zawiera jakichkolwiek tabel.
 - Baza danych oraz użytkownik init będą istnieli w momencie pierwszego uruchomienia bazy.
 - Przy pierwszym uruchomieniu program powinien utworzyć wszystkie niezbędne elementy bazy danych (tabele, więzy, funkcje wyzwalacze, użytkownik app z odpowiednimi uprawnieniami) zgodnie z przygotowanym przez studenta modelem fizycznym.
