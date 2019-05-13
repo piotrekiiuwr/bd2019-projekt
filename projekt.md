@@ -63,9 +63,13 @@ W pierwszej linii wejścia znajduje się wywołanie funkcji open z argumentami u
 
 ## Format wyjścia
 
-Dla każdego wywołania wypisz w osobnej linii obiekt JSON zawierający obiekt z polami: status (zwracane zawsze), data (tylko dla funkcji zwracających krotki), oraz opcjonalne pole debug. 
+Dla każdego wywołania wypisz w osobnej linii obiekt JSON zawierający obiekt z polami: status (zwracane zawsze), data (tylko dla funkcji zwracających krotki), debug (opcjonalne). 
 
-Wartość pola status to "OK" albo "ERROR". Tabela data zawiera wszystkie krotki wynikowe. Każda krotka to tabela zawierająca wartości wszystkich jej atrybutów w kolejności podanej w specyfikacji. Dopuszczalna jest dodatkowa para o kluczu debug i wartości typu string z ew. informacją przydatną w debugowaniu (jest ona całkowicie dobrowolna i będzie ignorowana w czasie testowania, powinna mieć niewielki rozmiar).
+Wartość pola status to "OK" albo "ERROR".
+ 
+Tabela data zawiera wszystkie krotki wynikowe. Każda krotka to tabela zawierająca wartości wszystkich jej atrybutów w kolejności podanej w specyfikacji.
+
+Dopuszczalna jest dodatkowa para o kluczu debug i wartości typu string z ew. informacją przydatną w debugowaniu (jest ona całkowicie dobrowolna i będzie ignorowana w czasie testowania, powinna mieć niewielki rozmiar).
 
 
 ## Przykładowe wejście i wyjście
@@ -167,11 +171,12 @@ protest <timestamp> <member> <passwd> <action> <project> [ <authority> ]
 ```
 
 Dodawanie nowej akcji `<action>` wsparcia (support) lub sprzeciwu (protest) wobec działania `<project>` prowadzonego przez organ władzy `<authority>`. 
-* Jeśli `<member>` jest członkiem partii to `<passwd>` musi być jego hasłem, w przeciwnym razie dodawany jest nowy członek o podanym id i haśle, jeśli id jest zajęte (pozbawienie praw) to jest zgłaszany błąd. 
+* Jeśli `<member>` jest członkiem partii to `<passwd>` musi być jego hasłem.  
+* Jeśli członek o podanym id nie istnieje dodawany jest nowy członek o podanym id i haśle. 
+* Jeśli id jest zamrożone to jest zgłaszany błąd. 
 * Jeśli `<project>` jest działaniem dodanym wcześniej to wartość `<authority>` jest ignorowana, wpp `<authority>` musi być podana.
 
 // nie zwraca pola data
-
 
 ###### upvote downvote
 
@@ -185,7 +190,9 @@ Członek `<member>` głosuje za (upvote) albo przeciw (downvote) przeprowadzeniu
 
 * Można głosować co najwyżej jeden raz w sprawie każdej akcji.
 
-* Jeśli `<member>` jest członkiem partii to `<passwd>` musi być jego hasłem, w przeciwnym razie dodawany jest nowy członek o podanym id i haśle, jeśli id jest zajęte (pozbawienie praw) to jest zgłaszany błąd.
+* Jeśli `<member>` jest członkiem partii to `<passwd>` musi być jego hasłem.  
+* Jeśli członek o podanym id nie istnieje dodawany jest nowy członek o podanym id i haśle. 
+* Jeśli id jest zamrożone to jest zgłaszany błąd. 
 
 // nie zwraca pola data
 
@@ -199,8 +206,7 @@ Zwraca listę wszystkich akcji wraz z typem, id projektu, id organu władzy oraz
 * Jeśli podano `<type>` w postaci tekstu "support" albo "protest" należy ograniczyć się do akcji podanego typu.
 * Jeśli podano `<project>` należy ograniczyć się do akcji dotyczących danego `<project>`.
 * Jeśli podano `<authority>` należy ograniczyć się do akcji dotyczących działań danego `<authority>`.
-
-`<passwd>` to hasło członka `<member>` będącego liderem.
+* `<passwd>` to hasło członka `<member>` będącego liderem.
 
 Atrybuty zwracanych krotek, krotki muszą być posortowane wg `<action>` rosnąco
 ```
@@ -215,7 +221,7 @@ projects <timestamp> <member> <passwd> [ authority ]
 
 Zwraca listę wszystkich działań wraz z id organu władzy prowadzącego dane działanie.
 * Jeśli `<authority>` jest podane to zwraca wyłącznie akcje dotyczące działań danego `<authority>`
-`<passwd>` to hasło członka `<member>` będącego liderem.
+* `<passwd>` to hasło członka `<member>` będącego liderem.
 
 Atrybuty zwracanych krotek, krotki muszą być posortowane wg `<project>` rosnąco
 ```
