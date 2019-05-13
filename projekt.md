@@ -188,8 +188,8 @@ actions <timestamp> <member> <passwd> [ <type> ] [ <project> | <authority> ]
 Zwraca listę wszystkich akcji wraz z typem, id projektu, id organu władzy oraz z liczbami głosów za i przeciw akcji z następującymi zastrzeżeniami:
 
 * jeśli podano `<type>` w postaci tekstu „support” albo „protest” należy ograniczyć się do akcji podanego typu,
-* jeśli podano `<project>` należy ograniczyć się do akcji dotyczących danego <project>,
-* jeśli podano `<authority>` należy ograniczyć się do akcji dotyczących działań danego <authority>.
+* jeśli podano `<project>` należy ograniczyć się do akcji dotyczących danego `<project>`,
+* jeśli podano `<authority>` należy ograniczyć się do akcji dotyczących działań danego `<authority>`.
 
 `<passwd>` to hasło członka `<member>` będącego liderem.
 
