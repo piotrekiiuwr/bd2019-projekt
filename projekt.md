@@ -21,6 +21,8 @@ Partią zarządza zespół liderów (będących członkami partii).
 
 System Linux. Język programowania dowolny – wybór wymaga zatwierdzenia przez prowadzącego pracownię - zalecany język python. Baza danych – PostgreSQL w wersji >=9.5. Testy będą przeprowadzane na komputerze z Ubuntu 18.04, PostgreSQL 10.7 .
 
+## Implementacja
+
 Twój program po uruchomieniu powinien przeczytać ze standardowego wejścia ciąg wywołań funkcji API, a wyniki ich działania wypisać na standardowe wyjście.
 
 Wszystkie dane powinny być przechowywane w bazie danych, efekt działania każdej funkcji modyfikującej bazę, dla której wypisano potwierdzenie wykonania (wartość OK) powinien być utrwalony. Program będzie uruchamiany wielokrotnie z następującymi parametrami:
