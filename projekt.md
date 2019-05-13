@@ -44,6 +44,7 @@ Wejście zawiera w pierwszym wierszu wywołanie funkcji open z następującymi d
 - Baza nie będzie modyfikowana pomiędzy kolejnymi uruchomieniami.
 - Program nie będzie miał praw do tworzenia i zapisywania jakichkolwiek plików. 
 - Program będzie mógł czytać pliki z bieżącego katalogu (np. dołączony do rozwiązania studenta plik .sql zawierający polecenia tworzące niezbędne elementy bazy).
+ 
 
 ## Format wejścia
 
@@ -66,7 +67,9 @@ Dla każdego wywołania wypisz w osobnej linii obiekt JSON zawierający status w
 
 Format zwracanych danych (dla czytelności zawiera zakazane znaki nowej linii):
 
-Obiekt z polami: status, data (tylko dla funkcji zwracających krotki), oraz ew. pole debug. Wartość status to OK/ERROR. Tabela data zawiera wszystkie krotki wynikowe. Każda krotka to tabela zawierająca wartości wszystkich jej atrybutów w kolejności podanej w specyfikacji. Dopuszczalna jest dodatkowa para o kluczu debug i wartości typu string z ew. informacją przydatną w debugowaniu (jest ona całkowicie dobrowolna i będzie ignorowana w czasie testowania, powinna mieć niewielki rozmiar).
+Obiekt z polami: status (zwracane zawsze), data (tylko dla funkcji zwracających krotki), oraz opcjonalne pole debug. Wartość status to OK/ERROR. Tabela data zawiera wszystkie krotki wynikowe. Każda krotka to tabela zawierająca wartości wszystkich jej atrybutów w kolejności podanej w specyfikacji. Dopuszczalna jest dodatkowa para o kluczu debug i wartości typu string z ew. informacją przydatną w debugowaniu (jest ona całkowicie dobrowolna i będzie ignorowana w czasie testowania, powinna mieć niewielki rozmiar).
+
+Jeśli wywołanie funkcji nie odpowiada niniejszej specyfikacji należy zwrócić status ERROR (nie piszemy wariantów fail-safe itp.).
 
 
 ## Przykładowe wejście i wyjście
@@ -116,7 +119,7 @@ Pierwsze uruchomienie (z parametrem `--init`):
 ```
 opis działania funkcji
 
-// opis formatu wyniku: lista atrybutów wynikowych tabeli data
+// lista atrybutów wynikowych tabeli data lub informacja o braku tego pola
 
 
 ## Nawiązywanie połączenia i definiowanie liderów
@@ -130,7 +133,7 @@ open <database> <login> <password>
 ```
 Przekazuje dane umożliwiające podłączenie Twojego programu do bazy - nazwę bazy, login oraz hasło, wywoływane dokładnie jeden raz, w pierwszej linii wejścia
 
-// zwraca status OK/ERROR w zależności od tego czy udało się nawiązać połączenie z bazą
+// nie zwraca pola data
 
 ###### leader
 
@@ -139,7 +142,7 @@ leader <password> <member>
 ```
 Tworzy nowego członka partii, który będzie jej liderem o unikalnym identyfikatorze `<member>` z hasłem `<password>`
 
-// zwraca status OK/ERROR
+// nie zwraca pola data
 
 ## Wywołania API
 
@@ -170,7 +173,8 @@ Dodawanie nowej akcji `<action>` wsparcia (support) lub sprzeciwu (protest) wobe
 * Jeśli `<member>` jest członkiem partii to `<passwd>` musi być jego hasłem, w przeciwnym razie dodawany jest nowy członek o podanym id i haśle, jeśli id jest zajęte (pozbawienie praw) to jest zgłaszany błąd. 
 * Jeśli `<project>` jest działaniem dodanym wcześniej to wartość `<authority>` jest ignorowana, wpp `<authority>` musi być podana.
 
-// zwraca status OK/ERROR, nie zwraca atrybutu data
+// nie zwraca pola data
+
 
 ###### upvote downvote
 
@@ -186,7 +190,7 @@ Członek `<member>` głosuje za (upvote) albo przeciw (downvote) przeprowadzeniu
 
 * Jeśli `<member>` jest członkiem partii to `<passwd>` musi być jego hasłem, w przeciwnym razie dodawany jest nowy członek o podanym id i haśle, jeśli id jest zajęte (pozbawienie praw) to jest zgłaszany błąd.
 
-// zwraca status OK/ERROR, nie zwraca data
+// nie zwraca pola data
 
 ###### actions
 ```
