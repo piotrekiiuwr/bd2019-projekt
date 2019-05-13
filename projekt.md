@@ -45,7 +45,7 @@ Wejście zawiera w pierwszym wierszu wywołanie funkcji open z następującymi d
 - Program nie będzie miał praw do tworzenia i zapisywania jakichkolwiek plików. 
 - Program będzie mógł czytać pliki z bieżącego katalogu (np. dołączony do rozwiązania studenta plik .sql zawierający polecenia tworzące niezbędne elementy bazy).
 
-## Format pliku wejściowego
+## Format wejścia
 
 Każda linia pliku wejściowego zawiera obiekt JSON (http://www.json.org/json-pl.html). Każdy z obiektów opisuje wywołanie jednej funkcji API wraz z argumentami.
 
@@ -69,7 +69,7 @@ Format zwracanych danych (dla czytelności zawiera zakazane znaki nowej linii):
 Obiekt z polami: status, data (tylko dla funkcji zwracających krotki), oraz ew. pole debug. Wartość status to OK/ERROR. Tabela data zawiera wszystkie krotki wynikowe. Każda krotka to tabela zawierająca wartości wszystkich jej atrybutów w kolejności podanej w specyfikacji. Dopuszczalna jest dodatkowa para o kluczu debug i wartości typu string z ew. informacją przydatną w debugowaniu (jest ona całkowicie dobrowolna i będzie ignorowana w czasie testowania, powinna mieć niewielki rozmiar).
 
 
-###### Przykładowe wejście i wyjście
+## Przykładowe wejście i wyjście
 
 Pierwsze uruchomienie (z parametrem `--init`):
 ```
