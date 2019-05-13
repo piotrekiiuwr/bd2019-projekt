@@ -57,7 +57,7 @@ Dla każdego wywołania wypisz w osobnej linii obiekt JSON zawierający status w
 
 Format zwracanych danych (dla czytelności zawiera zakazane znaki nowej linii):
 
-Obiekt z polami: status, data (oraz ew. pole debug). Wartość status to OK/ERROR. Tabela data zawiera wszystkie krotki wynikowe. Każda krotka to tabela zawierająca wartości wszystkich jej atrybutów w kolejności podanej w specyfikacji. Dopuszczalna jest dodatkowa para o kluczu debug i wartości typu string z ew. informacją przydatną w debugowaniu (jest ona całkowicie dobrowolna i będzie ignorowana w czasie testowania, powinna mieć niewielki rozmiar).
+Obiekt z polami: status, data (tylko dla funkcji zwracających krotki), oraz ew. pole debug. Wartość status to OK/ERROR. Tabela data zawiera wszystkie krotki wynikowe. Każda krotka to tabela zawierająca wartości wszystkich jej atrybutów w kolejności podanej w specyfikacji. Dopuszczalna jest dodatkowa para o kluczu debug i wartości typu string z ew. informacją przydatną w debugowaniu (jest ona całkowicie dobrowolna i będzie ignorowana w czasie testowania, powinna mieć niewielki rozmiar).
 
 
 ###### Przykładowe wejście i wyjście
