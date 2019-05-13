@@ -139,7 +139,7 @@ Każde z poniższych wywołań powinno zwrócić obiekt JSON zawierający status
 
 Jeśli zapytanie jest autoryzowane danymi członka pozbawionego praw to jest zgłaszany błąd.
 
-Identyfikatory `<member> <action> <project> <authority>` są typu number i są globalnie unikalne (np. nie zdarzy się, że wartość `<member>` jest równa wartości <authority>)`
+Identyfikatory `<member> <action> <project> <authority>` są typu number i są globalnie unikalne (np. nie zdarzy się, że wartość `<member>` jest równa wartości `<authority>`)
 
 Wartość `<password>` jest typu string, jej długość nie przekracza 128 znaków.
 
