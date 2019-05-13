@@ -21,6 +21,8 @@ Partią zarządza zespół liderów (będących członkami partii).
 
 System Linux. Język programowania dowolny – wybór wymaga zatwierdzenia przez prowadzącego pracownię - zalecany język Python. Baza danych – PostgreSQL w wersji >=9.5. Testy będą przeprowadzane na komputerze z Ubuntu 18.04, PostgreSQL 10.7 .
 
+## Implementacja
+
 Twój program po uruchomieniu powinien przeczytać ze standardowego wejścia ciąg wywołań funkcji API, a wyniki ich działania wypisać na standardowe wyjście.
 
 Wszystkie dane powinny być przechowywane w bazie danych, efekt działania każdej funkcji modyfikującej bazę, dla której wypisano potwierdzenie wykonania (wartość OK) powinien być utrwalony. Program będzie uruchamiany wielokrotnie z następującymi parametrami:
@@ -59,7 +61,7 @@ Dla każdego wywołania wypisz w osobnej linii obiekt JSON zawierający status w
 
 Format zwracanych danych (dla czytelności zawiera zakazane znaki nowej linii):
 
-Obiekt z polami: status, data (oraz ew. pole debug). Wartość status to OK/ERROR. Tabela data zawiera wszystkie krotki wynikowe. Każda krotka to tabela zawierająca wartości wszystkich jej atrybutów w kolejności podanej w specyfikacji. Dopuszczalna jest dodatkowa para o kluczu debug i wartości typu string z ew. informacją przydatną w debugowaniu (jest ona całkowicie dobrowolna i będzie ignorowana w czasie testowania, powinna mieć niewielki rozmiar).
+Obiekt z polami: status, data (tylko dla funkcji zwracających krotki), oraz ew. pole debug. Wartość status to OK/ERROR. Tabela data zawiera wszystkie krotki wynikowe. Każda krotka to tabela zawierająca wartości wszystkich jej atrybutów w kolejności podanej w specyfikacji. Dopuszczalna jest dodatkowa para o kluczu debug i wartości typu string z ew. informacją przydatną w debugowaniu (jest ona całkowicie dobrowolna i będzie ignorowana w czasie testowania, powinna mieć niewielki rozmiar).
 
 
 ###### Przykładowe wejście i wyjście
@@ -188,8 +190,8 @@ actions <timestamp> <member> <passwd> [ <type> ] [ <project> | <authority> ]
 
 Zwraca listę wszystkich akcji wraz z typem, id projektu, id organu władzy oraz z liczbami głosów za i przeciw akcji z następującymi zastrzeżeniami:
 
-* Jeśli podano `<type>` w postaci tekstu "support" albo "protest" należy ograniczyć się do akcji podanego typu,
-* Jeśli podano `<project>` należy ograniczyć się do akcji dotyczących danego `<project>`,
+* Jeśli podano `<type>` w postaci tekstu "support" albo "protest" należy ograniczyć się do akcji podanego typu.
+* Jeśli podano `<project>` należy ograniczyć się do akcji dotyczących danego `<project>`.
 * Jeśli podano `<authority>` należy ograniczyć się do akcji dotyczących działań danego `<authority>`.
 
 `<passwd>` to hasło członka `<member>` będącego liderem.
