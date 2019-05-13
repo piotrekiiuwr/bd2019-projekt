@@ -19,7 +19,7 @@ Partią zarządza zespół liderów (będących członkami partii).
 
 ## Technologie
 
-System Linux. Język programowania dowolny – wybór wymaga zatwierdzenia przez prowadzącego pracownię - zalecany język python. Baza danych – PostgreSQL w wersji >=9.5. Testy będą przeprowadzane na komputerze z Ubuntu 18.04, PostgreSQL 10.7 .
+System Linux. Język programowania dowolny – wybór wymaga zatwierdzenia przez prowadzącego pracownię - zalecany język Python. Baza danych – PostgreSQL w wersji >=9.5. Testy będą przeprowadzane na komputerze z Ubuntu 18.04, PostgreSQL 10.7 .
 
 Twój program po uruchomieniu powinien przeczytać ze standardowego wejścia ciąg wywołań funkcji API, a wyniki ich działania wypisać na standardowe wyjście.
 
@@ -42,7 +42,9 @@ Baza danych oraz użytkownik init będą istnieli w momencie pierwszego uruchomi
 
 Każda linia pliku wejściowego zawiera obiekt JSON (http://www.json.org/json-pl.html). Każdy z obiektów opisuje wywołanie jednej funkcji API wraz z argumentami.
 
-Przykład: obiekt
+Przykład: 
+
+Obiekt
 ```
 { "leader": { "password": "abcde", "member": 1}} 
 ```
@@ -93,13 +95,12 @@ Pierwsze uruchomienie (z parametrem `--init`):
 {"status": "OK"}
 ...
 {"status": "OK",
-  "data": [ [ 1, 0, 2],
-         [ 2, 1, 0],
-	          [ 3, 0, 0] 
-        ]
+  "data": [[ 1, 0, 2],
+           [ 2, 1, 0],
+           [ 3, 0, 0]]
 }
 {"status": "OK",
-  "data": [ [ 3, 1, 2,"true"] ]
+  "data": [ [ 3, 1, 2, "true"] ]
 }
 ```
 ## Format opisu API
@@ -120,7 +121,7 @@ Każde z poniższych wywołań powinno zwrócić obiekt JSON zawierający status
 ```
 open <database> <login> <password>
 ```
-przekazuje dane umożliwiające podłączenie Twojego programu do bazy - nazwę bazy, login oraz hasło, wywoływane dokładnie jeden raz, w pierwszej linii wejścia
+Przekazuje dane umożliwiające podłączenie Twojego programu do bazy - nazwę bazy, login oraz hasło, wywoływane dokładnie jeden raz, w pierwszej linii wejścia
 
 // zwraca status OK/ERROR w zależności od tego czy udało się nawiązać połączenie z bazą
 
@@ -129,7 +130,7 @@ przekazuje dane umożliwiające podłączenie Twojego programu do bazy - nazwę 
 ```
 leader <password> <member>
 ```
-tworzy nowego członka partii, który będzie jej liderem o unikalnym identyfikatorze `<member>` z hasłem `<password>`
+Tworzy nowego członka partii, który będzie jej liderem o unikalnym identyfikatorze `<member>` z hasłem `<password>`
 
 // zwraca status OK/ERROR
 
@@ -139,7 +140,7 @@ Każde z poniższych wywołań powinno zwrócić obiekt JSON zawierający status
 
 Jeśli zapytanie jest autoryzowane danymi członka pozbawionego praw to jest zgłaszany błąd.
 
-Identyfikatory `<member> <action> <project> <authority>` są typu number i są globalnie unikalne (np. nie zdarzy się, że wartość `<member>` jest równa wartości <authority>)`
+Identyfikatory `<member>`, `<action>`, `<project>`, `<authority>` są typu number i są globalnie unikalne (np. nie zdarzy się, że wartość `<member>` jest równa wartości `<authority>`)
 
 Wartość `<password>` jest typu string, jej długość nie przekracza 128 znaków.
 
@@ -174,9 +175,9 @@ downvote <timestamp> <member> <passwd> <action>
 
 Członek `<member>` głosuje za (upvote) albo przeciw (downvote) przeprowadzeniu akcji `<action>`.
 
-Można głosować co najwyżej jeden raz w sprawie każdej akcji.
+* Można głosować co najwyżej jeden raz w sprawie każdej akcji.
 
-Jeśli `<member>` jest członkiem partii to `<passwd>` musi być jego hasłem, w przeciwnym razie dodawany jest nowy członek o podanym id i haśle, jeśli id jest zajęte (pozbawienie praw) to jest zgłaszany błąd.
+* Jeśli `<member>` jest członkiem partii to `<passwd>` musi być jego hasłem, w przeciwnym razie dodawany jest nowy członek o podanym id i haśle, jeśli id jest zajęte (pozbawienie praw) to jest zgłaszany błąd.
 
 // zwraca status OK/ERROR, nie zwraca data
 
@@ -187,9 +188,9 @@ actions <timestamp> <member> <passwd> [ <type> ] [ <project> | <authority> ]
 
 Zwraca listę wszystkich akcji wraz z typem, id projektu, id organu władzy oraz z liczbami głosów za i przeciw akcji z następującymi zastrzeżeniami:
 
-* jeśli podano `<type>` w postaci tekstu „support” albo „protest” należy ograniczyć się do akcji podanego typu,
-* jeśli podano `<project>` należy ograniczyć się do akcji dotyczących danego <project>,
-* jeśli podano `<authority>` należy ograniczyć się do akcji dotyczących działań danego <authority>.
+* Jeśli podano `<type>` w postaci tekstu "support" albo "protest" należy ograniczyć się do akcji podanego typu,
+* Jeśli podano `<project>` należy ograniczyć się do akcji dotyczących danego `<project>`,
+* Jeśli podano `<authority>` należy ograniczyć się do akcji dotyczących działań danego `<authority>`.
 
 `<passwd>` to hasło członka `<member>` będącego liderem.
 
@@ -204,8 +205,8 @@ Atrybuty zwracanych krotek, krotki muszą być posortowane wg `<action>` rosnąc
 projects <timestamp> <member> <passwd> [ authority ]
 ```
 
-Zwraca listę wszystkich działań wraz z id organu władzy prowadzącego dane działanie, przy czym 
-* jeśli `<authority>` jest podane to zwraca wyłącznie akcje dotyczące działań danego <authority
+Zwraca listę wszystkich działań wraz z id organu władzy prowadzącego dane działanie.
+* Jeśli `<authority>` jest podane to zwraca wyłącznie akcje dotyczące działań danego `<authority>`
 `<passwd>` to hasło członka `<member>` będącego liderem.
 
 Atrybuty zwracanych krotek, krotki muszą być posortowane wg `<project>` rosnąco
