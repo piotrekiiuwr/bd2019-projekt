@@ -25,18 +25,23 @@ Twój program po uruchomieniu powinien przeczytać ze standardowego wejścia ci�
 
 Wszystkie dane powinny być przechowywane w bazie danych, efekt działania każdej funkcji modyfikującej bazę, dla której wypisano potwierdzenie wykonania (wartość OK) powinien być utrwalony. Program będzie uruchamiany wielokrotnie z następującymi parametrami:
 
-- pierwsze uruchomienie - program wywołany z parametrem --init -
+- pierwsze uruchomienie - program wywołany z parametrem --init
 
 Wejście zawiera w pierwszym wierszu wywołanie funkcji open z następującymi danymi login: init, password: qwerty, w kolejnych wierszach wywołania funkcji leader.
 
-Można założyć, że przed uruchomieniem z parametrem --init baza nie zawiera jakichkolwiek tabel.
+- kolejne uruchomienia
 
-- kolejne uruchomienia - wejście zawiera w pierwszym wierszu wywołanie funkcji open z następującymi danymi login: app, password: qwerty, a następnie wywołania dowolnych funkcji API za wyjątkiem funkcji open i leader.
+Wejście zawiera w pierwszym wierszu wywołanie funkcji open z następującymi danymi login: app, password: qwerty, a następnie wywołania dowolnych funkcji API za wyjątkiem funkcji open i leader.
 
-Przy pierwszym uruchomieniu program powinien utworzyć wszystkie niezbędne elementy bazy danych (tabele, więzy, funkcje wyzwalacze, użytkownik app z odpowiednimi uprawnieniami) zgodnie z przygotowanym przez studenta modelem fizycznym. Baza nie będzie modyfikowana pomiędzy kolejnymi uruchomieniami. Program nie będzie miał praw do tworzenia i zapisywania jakichkolwiek plików. Program będzie mógł czytać pliki z bieżącego katalogu (np. dołączony do rozwiązania studenta plik sql zawierający polecenia tworzące bazę).
-
-Baza danych oraz użytkownik init będą istnieli w momencie pierwszego uruchomienia bazy, należy utworzyć użytkownika app, nadać mu odpowiednie uprawnienia i hasło (moduł pgcrypto będzie dostępny). Hasła należy przechowywać w bezpieczny sposób.
-
+## Nota Bene
+- Można założyć, że przed uruchomieniem z parametrem --init baza nie zawiera jakichkolwiek tabel.
+- Baza danych oraz użytkownik init będą istnieli w momencie pierwszego uruchomienia bazy.
+- Przy pierwszym uruchomieniu program powinien utworzyć wszystkie niezbędne elementy bazy danych (tabele, więzy, funkcje wyzwalacze, użytkownik app z odpowiednimi uprawnieniami) zgodnie z przygotowanym przez studenta modelem fizycznym.
+- Należy utworzyć użytkownika app, nadać mu odpowiednie uprawnienia i hasło (moduł pgcrypto będzie dostępny).
+- Hasła należy przechowywać w bezpieczny sposób.
+- Baza nie będzie modyfikowana pomiędzy kolejnymi uruchomieniami.
+- Program nie będzie miał praw do tworzenia i zapisywania jakichkolwiek plików. 
+- Program będzie mógł czytać pliki z bieżącego katalogu (np. dołączony do rozwiązania studenta plik .sql zawierający polecenia tworzące niezbędne elementy bazy).
 
 ## Format pliku wejściowego
 
