@@ -63,13 +63,9 @@ W pierwszej linii wejścia znajduje się wywołanie funkcji open z argumentami u
 
 ## Format wyjścia
 
-Dla każdego wywołania wypisz w osobnej linii obiekt JSON zawierający status wykonania funkcji OK/ERROR oraz tabelę data zawierającą wynik działania tej funkcji wg specyfikacji.
+Dla każdego wywołania wypisz w osobnej linii obiekt JSON zawierający obiekt z polami: status (zwracane zawsze), data (tylko dla funkcji zwracających krotki), oraz opcjonalne pole debug. 
 
-Format zwracanych danych (dla czytelności zawiera zakazane znaki nowej linii):
-
-Obiekt z polami: status (zwracane zawsze), data (tylko dla funkcji zwracających krotki), oraz opcjonalne pole debug. Wartość status to OK/ERROR. Tabela data zawiera wszystkie krotki wynikowe. Każda krotka to tabela zawierająca wartości wszystkich jej atrybutów w kolejności podanej w specyfikacji. Dopuszczalna jest dodatkowa para o kluczu debug i wartości typu string z ew. informacją przydatną w debugowaniu (jest ona całkowicie dobrowolna i będzie ignorowana w czasie testowania, powinna mieć niewielki rozmiar).
-
-Jeśli wywołanie funkcji nie odpowiada niniejszej specyfikacji należy zwrócić status ERROR (nie piszemy wariantów fail-safe itp.).
+Wartość pola status to "OK" albo "ERROR". Tabela data zawiera wszystkie krotki wynikowe. Każda krotka to tabela zawierająca wartości wszystkich jej atrybutów w kolejności podanej w specyfikacji. Dopuszczalna jest dodatkowa para o kluczu debug i wartości typu string z ew. informacją przydatną w debugowaniu (jest ona całkowicie dobrowolna i będzie ignorowana w czasie testowania, powinna mieć niewielki rozmiar).
 
 
 ## Przykładowe wejście i wyjście
@@ -121,10 +117,25 @@ opis działania funkcji
 
 // lista atrybutów wynikowych tabeli data lub informacja o braku tego pola
 
+## Wywołania API
+
+Identyfikatory `<member>`, `<action>`, `<project>`, `<authority>` są typu number i są globalnie unikalne (np. nie zdarzy się, że wartość `<member>` jest równa wartości `<authority>`)
+
+Wartość `<password>` jest typu string, jej długość nie przekracza 128 znaków.
+
+Wartość `<timestamp>` jest typu number i reprezentuje UNIX timestamp. Gwarantowane jest, że wszyskie wywołania będą podane na wejściu w kolejności rosnących timestampów.
+
+Argumenty funkcji w nawiasach `[ ]` są opcjonalne (tzn. nie muszą być podane w wywołaniu funkcji).
+
+###### Status "ERROR"
+
+Jeśli wywołanie funkcji nie odpowiada niniejszej specyfikacji należy zwrócić status "ERROR" (nie piszemy wariantów fail-safe itp.).
+
+Jeśli wywołanie funkcji jest autoryzowane danymi członka pozbawionego praw należy zwrócić status "ERROR".
+
 
 ## Nawiązywanie połączenia i definiowanie liderów
 
-Każde z poniższych wywołań powinno zwrócić obiekt JSON zawierający status wykonania OK/ERROR.
 
 ###### open
 
@@ -143,20 +154,6 @@ leader <password> <member>
 Tworzy nowego członka partii, który będzie jej liderem o unikalnym identyfikatorze `<member>` z hasłem `<password>`
 
 // nie zwraca pola data
-
-## Wywołania API
-
-Każde z poniższych wywołań powinno zwrócić obiekt JSON zawierający status wykonania OK/ERROR, oraz ew. tabelę data zawierającą kolejne krotki wyniku wg specyfikacji poniżej.
-
-Jeśli zapytanie jest autoryzowane danymi członka pozbawionego praw to jest zgłaszany błąd.
-
-Identyfikatory `<member>`, `<action>`, `<project>`, `<authority>` są typu number i są globalnie unikalne (np. nie zdarzy się, że wartość `<member>` jest równa wartości `<authority>`)
-
-Wartość `<password>` jest typu string, jej długość nie przekracza 128 znaków.
-
-Wartość `<timestamp>` jest typu number i reprezentuje UNIX timestamp. Gwarantowane jest, że wszyskie wywołania będą podane na wejściu w kolejności rosnących timestampów.
-
-Argumenty funkcji w nawiasach [ ] są opcjonalne (tzn. nie muszą być podane w wywołaniu funkcji).
 
 
 ## Lista funkcji API
