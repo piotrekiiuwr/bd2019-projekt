@@ -6,7 +6,7 @@ Ogłaszam możliwość otrzymania punktów bonusowych za zgłaszane uwagi do pro
 
 Za uwagi, które wg mojej subiektywnej opinii będą pomocne oferuję bonus do 10% maksa z teorii/sql/projektu (wg wyboru studenta - wybór proszę dospecyfikować w opisie pull - requesta/issue w postaci pojedynczej linii (ostatniej we wpisie) zawierającej jedną z opcji: teoria/sql/projekt).
 
-Dokładna wysokość bonusa zależy od wagi problemu, który koryguje oraz terminu zgłoszenia (im szybciej tym łatwiej będzie mi je uwzględnić). Bonus będzie przyznawany łącznie za wszystkie uwagi zgłoszone do dnia 19 maja włącznie (limit 10% dotyczy łącznie wszystkich uwag zgłoszonych przez pojedynczego studenta, punkty może dostać  pierwsza osoba zgłaszająca dany problem i pierwsza proponująca sensowną wersję rozwiązania).
+Dokładna wysokość bonusa zależy od wagi korygowanego problemu oraz terminu zgłoszenia (im szybciej tym łatwiej będzie mi daną uwagę uwzględnić). Bonus będzie przyznawany łącznie za wszystkie uwagi zgłoszone do dnia 19 maja włącznie (limit 10% dotyczy łącznie wszystkich uwag zgłoszonych przez pojedynczego studenta, punkty może dostać  pierwsza osoba zgłaszająca dany problem i pierwsza proponująca sensowną wersję rozwiązania).
 
 Jak używać git-a oraz github-a można nauczyć się tutaj: https://guides.github.com/
 W szczególności należy zapoznać się z poradnikami: 
