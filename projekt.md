@@ -21,6 +21,8 @@ Partią zarządza zespół liderów (będących członkami partii).
 
 System Linux. Język programowania dowolny – wybór wymaga zatwierdzenia przez prowadzącego pracownię - zalecany język python. Baza danych – PostgreSQL w wersji >=9.5. Testy będą przeprowadzane na komputerze z Ubuntu 18.04, PostgreSQL 10.7 .
 
+## Implementacja
+
 Twój program po uruchomieniu powinien przeczytać ze standardowego wejścia ciąg wywołań funkcji API, a wyniki ich działania wypisać na standardowe wyjście.
 
 Wszystkie dane powinny być przechowywane w bazie danych, efekt działania każdej funkcji modyfikującej bazę, dla której wypisano potwierdzenie wykonania (wartość OK) powinien być utrwalony. Program będzie uruchamiany wielokrotnie z następującymi parametrami:
@@ -139,7 +141,7 @@ Każde z poniższych wywołań powinno zwrócić obiekt JSON zawierający status
 
 Jeśli zapytanie jest autoryzowane danymi członka pozbawionego praw to jest zgłaszany błąd.
 
-Identyfikatory `<member> <action> <project> <authority>` są typu number i są globalnie unikalne (np. nie zdarzy się, że wartość `<member>` jest równa wartości <authority>)`
+Identyfikatory `<member> <action> <project> <authority>` są typu number i są globalnie unikalne (np. nie zdarzy się, że wartość `<member>` jest równa wartości `<authority>`)
 
 Wartość `<password>` jest typu string, jej długość nie przekracza 128 znaków.
 
