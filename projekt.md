@@ -166,13 +166,13 @@ Tworzy nowego członka partii, który będzie jej liderem o unikalnym identyfika
 ###### support protest
 
 ```
-support <timestamp> <member> <passwd> <action> <project> [ <authority> ]
+support <timestamp> <member> <password> <action> <project> [ <authority> ]
 
-protest <timestamp> <member> <passwd> <action> <project> [ <authority> ]
+protest <timestamp> <member> <password> <action> <project> [ <authority> ]
 ```
 
 Dodawanie nowej akcji `<action>` wsparcia (support) lub sprzeciwu (protest) wobec działania `<project>` prowadzonego przez organ władzy `<authority>`. 
-* Jeśli `<member>` jest członkiem partii to `<passwd>` musi być jego hasłem.  
+* Jeśli `<member>` jest członkiem partii to `<password>` musi być jego hasłem.  
 * Jeśli członek o podanym id nie istnieje dodawany jest nowy członek o podanym id i haśle. 
 * Jeśli id jest zamrożone to jest zgłaszany błąd. 
 * Jeśli `<project>` jest działaniem dodanym wcześniej to wartość `<authority>` jest ignorowana, wpp `<authority>` musi być podana.
@@ -182,16 +182,16 @@ Dodawanie nowej akcji `<action>` wsparcia (support) lub sprzeciwu (protest) wobe
 ###### upvote downvote
 
 ```
-upvote <timestamp> <member> <passwd> <action> 
+upvote <timestamp> <member> <password> <action> 
 
-downvote <timestamp> <member> <passwd> <action> 
+downvote <timestamp> <member> <password> <action> 
 ```
 
 Członek `<member>` głosuje za (upvote) albo przeciw (downvote) przeprowadzeniu akcji `<action>`.
 
 * Można głosować co najwyżej jeden raz w sprawie każdej akcji.
 
-* Jeśli `<member>` jest członkiem partii to `<passwd>` musi być jego hasłem.  
+* Jeśli `<member>` jest członkiem partii to `<password>` musi być jego hasłem.  
 * Jeśli członek o podanym id nie istnieje dodawany jest nowy członek o podanym id i haśle. 
 * Jeśli id jest zamrożone to jest zgłaszany błąd. 
 
@@ -199,7 +199,7 @@ Członek `<member>` głosuje za (upvote) albo przeciw (downvote) przeprowadzeniu
 
 ###### actions
 ```
-actions <timestamp> <member> <passwd> [ <type> ] [ <project> | <authority> ] 
+actions <timestamp> <member> <password> [ <type> ] [ <project> | <authority> ] 
 ```
 
 Zwraca listę wszystkich akcji wraz z typem, id projektu, id organu władzy oraz z liczbami głosów za i przeciw akcji z następującymi zastrzeżeniami:
@@ -207,7 +207,7 @@ Zwraca listę wszystkich akcji wraz z typem, id projektu, id organu władzy oraz
 * Jeśli podano `<type>` w postaci tekstu "support" albo "protest" należy ograniczyć się do akcji podanego typu.
 * Jeśli podano `<project>` należy ograniczyć się do akcji dotyczących danego `<project>`.
 * Jeśli podano `<authority>` należy ograniczyć się do akcji dotyczących działań danego `<authority>`.
-* `<passwd>` to hasło członka `<member>` będącego liderem.
+* `<password>` to hasło członka `<member>` będącego liderem.
 
 Atrybuty zwracanych krotek, krotki muszą być posortowane wg `<action>` rosnąco
 ```
@@ -217,12 +217,12 @@ Atrybuty zwracanych krotek, krotki muszą być posortowane wg `<action>` rosnąc
 ###### projects
 
 ```
-projects <timestamp> <member> <passwd> [ authority ]
+projects <timestamp> <member> <password> [ authority ]
 ```
 
 Zwraca listę wszystkich działań wraz z id organu władzy prowadzącego dane działanie.
 * Jeśli `<authority>` jest podane to zwraca wyłącznie działania podanego `<authority>`
-* `<passwd>` to hasło członka `<member>` będącego liderem.
+* `<password>` to hasło członka `<member>` będącego liderem.
 
 Atrybuty zwracanych krotek, krotki muszą być posortowane wg `<project>` rosnąco
 ```
@@ -232,14 +232,14 @@ Atrybuty zwracanych krotek, krotki muszą być posortowane wg `<project>` rosną
 ###### votes
 
 ```
-votes <timestamp> <member> <passwd> [ <action> | <project> ]
+votes <timestamp> <member> <password> [ <action> | <project> ]
 ```
 
 Zwraca listę wszystkich członków, którzy oddawali głosy wraz z sumarycznymi liczbami głosów za i przeciw.
 * Jeśli podano `<action>` to wynik powinien ograniczyć się do głosów dotyczących akcji `<action>`
 * Jeśli podano `<project>` to wynik powinien ograniczyć się do głosów dotyczących akcji związanych z projektem `<project>`
 
-`<passwd>` to hasło członka `<member>` będącego liderem.
+`<password>` to hasło członka `<member>` będącego liderem.
 
 Atrybuty zwracanych krotek, krotki muszą być posortowane wg `<member>` rosnąco
 ```
@@ -258,5 +258,4 @@ Atrybuty zwracanych krotek, krotki muszą być posortowane wg wartości różnic
 ```
 // <member> <upvotes> <downvotes> <active>
 ```
-
 
