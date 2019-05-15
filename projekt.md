@@ -194,6 +194,7 @@ Członek `<member>` głosuje za (upvote) albo przeciw (downvote) przeprowadzeniu
 * Jeśli `<member>` jest członkiem partii to `<password>` musi być jego hasłem.  
 * Jeśli członek o podanym id nie istnieje dodawany jest nowy członek o podanym id i haśle. 
 * Jeśli id jest zamrożone to jest zgłaszany błąd. 
+* Jeśli akcja `<action>` nie została wcześniej dodana to jest zgłaszany błąd.
 
 // nie zwraca pola data
 
