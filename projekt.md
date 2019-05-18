@@ -236,7 +236,7 @@ Atrybuty zwracanych krotek, krotki muszą być posortowane wg `<project>` rosną
 votes <timestamp> <member> <password> [ <action> | <project> ]
 ```
 
-Zwraca listę wszystkich członków, którzy oddawali głosy wraz z sumarycznymi liczbami głosów za i przeciw.
+Zwraca listę wszystkich członków (w tym tych, którzy do tej pory nie głosowali) wraz z sumarycznymi liczbami oddanych przez nich głosów za (`<upvotes>`) i przeciw (`downvotes`).
 * Jeśli podano `<action>` to wynik powinien ograniczyć się do głosów dotyczących akcji `<action>`
 * Jeśli podano `<project>` to wynik powinien ograniczyć się do głosów dotyczących akcji związanych z projektem `<project>`
 
