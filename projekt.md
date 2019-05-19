@@ -124,13 +124,15 @@ opis działania funkcji
 
 ## Wywołania API
 
-Identyfikatory `<member>`, `<action>`, `<project>`, `<authority>` są typu number i są globalnie unikalne (np. nie zdarzy się, że wartość `<member>` jest równa wartości `<authority>`)
+Identyfikatory `<member>`, `<action>`, `<project>`, `<authority>` są typu number i są globalnie unikalne (tzn. nie może zdarzyć się, że np. wartość `<member>` jest równa wartości `<authority>`). **Każde wywołanie skutkujące naruszeniem globalnej unikalności  identyfikatorów powinno zwrócić błąd**. 
 
 Wartość `<password>` jest typu string, jej długość nie przekracza 128 znaków.
 
-Wartość `<timestamp>` jest typu number i reprezentuje UNIX timestamp. Gwarantowane jest, że wszyskie wywołania będą podane na wejściu w kolejności rosnących timestampów.
+Wartość `<timestamp>` jest typu number i reprezentuje UNIX timestamp. Gwarantowane jest, że wszystkie wywołania będą podane na wejściu w kolejności rosnących timestampów.
 
 Argumenty funkcji w nawiasach `[ ]` są opcjonalne (tzn. nie muszą być podane w wywołaniu funkcji).
+
+**Można założyć, że wszystkie wywołania będą zawsze w prawidłowym formacie, a wszystkie wartości będą odpowiedniego typu.**
 
 ###### Status "ERROR"
 
