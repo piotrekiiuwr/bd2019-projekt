@@ -13,15 +13,15 @@ Projekty należy przygotować indywidualnie.
 
 Co będzie oceniane?
 
-Model konceptualny - powinien składać się z diagramu E-R oraz komentarza zawierającego więzy pominięte w diagramie, powinien zawierać opis uprawnień użytkowników init i app. Komentarz powinien dodatkowo zawierać zwięzłą informację w jaki sposób zostaną zaimplementowane poszczególne funkcje API.
+Model konceptualny - powinien składać się z diagramu E-R oraz komentarza zawierającego więzy pominięte w diagramie, powinien zawierać opis uprawnień użytkowników init i app. Komentarz powinien dodatkowo zawierać zwięzłą informację w jaki sposób zostaną zaimplementowane poszczególne funkcje API **(termin: 30 maja, wysłanie poprzez zadanie na skosie, ocena: waga 20%)**
 
-Model fizyczny - powinien być plikiem sql nadającym się do czytania (i oceny) przez człowieka. Powinien zawierać definicję wszystkich tabel, więzów, indeksów, kluczy, akcji referencyjnych, funkcji, perspektyw i wyzwalaczy, a także użytkownika app z odpowiednimi uprawnieniami. Nie jest niezbędne wykorzystanie wszystkich tych udogodnień, ale tam, gdzie pasują, powinny być wykorzystywane.
+Model fizyczny - powinien być plikiem sql nadającym się do czytania (i oceny) przez człowieka. Powinien zawierać definicję wszystkich tabel, więzów, indeksów, kluczy, akcji referencyjnych, funkcji, perspektyw i wyzwalaczy, a także użytkownika app z odpowiednimi uprawnieniami. Nie jest niezbędne wykorzystanie wszystkich tych udogodnień, ale tam, gdzie pasują, powinny być wykorzystywane. **(ocena łącznie z programem)**
 
-Dokumentacja projektu - ma się składać z pojedynczego pliku pdf zawierającego ostateczny model konceptualny oraz dokładne instrukcje, jak należy aplikację uruchomić. Dokumentacja ma dotyczyć tego, co jest zaimplementowane; w szczególności, nie można oddać samej dokumentacji, bez projektu.
+Dokumentacja projektu - ma się składać z pojedynczego pliku pdf zawierającego ostateczny model konceptualny oraz dokładne instrukcje, jak należy aplikację uruchomić. Dokumentacja ma dotyczyć tego, co jest zaimplementowane; w szczególności, nie można oddać samej dokumentacji, bez projektu. **(ocena łącznie z programem)**
 
-Program - oceniany będzie kod źródłowy oraz poprawność i efektywność działania.
+Program - oceniany będzie kod źródłowy oraz poprawność i efektywność działania. **(ocena: waga 80%, łącznie z modelem fizycznym i dokumentacją)**
 
-Oddajemy archiwum zawierające wszystkie pliki źródłowe programu, dokumentację w pliku pdf, model fizyczny w pliku sql oraz polecenie typu make (ew. skrypt run.sh, itp.) umożliwiające kompilację i uruchomienie systemu - archiwum należy przesłać poprzez polecenie w systemie skos.
+Oddajemy archiwum zawierające wszystkie pliki źródłowe programu, ostateczną wersję modelu konceptualny oraz dokumentację w pliku pdf, model fizyczny w pliku sql oraz polecenie typu make (ew. skrypt run.sh, itp.) umożliwiające kompilację i uruchomienie systemu - archiwum należy przesłać poprzez polecenie w systemie skos.
 
 
 # Zasady, na których do 19 maja można było zgłaszać uwagi do projektu
