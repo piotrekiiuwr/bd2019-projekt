@@ -55,7 +55,7 @@ Przykład:
 
 Obiekt
 ```
-{ "leader": { "timestamp": 1557475000. "password": "abcde", "member": 1}} 
+{ "leader": { "timestamp": 1557475000, "password": "abcde", "member": 1}} 
 ```
 oznacza wywołanie funkcji o nazwie `leader` z argumentem `timestamp` przyjmującym wartość `1557475000`, argumentem `password` - wartość `abcde` oraz `member` – wartość `1`.
 
@@ -78,7 +78,7 @@ Dopuszczalna jest dodatkowa para o kluczu debug i wartości typu string z ew. in
 Pierwsze uruchomienie (z parametrem `--init`):
 ```
 { "open": { "database": "student", "login": "init", "password": "qwerty"}}
-{ "leader": { "timestamp": 1557475000, "password": "abc", "member": 1}}
+{ "leader": { "timestamp": 1557473000, "password": "abc", "member": 1}}
 { "leader": { "timestamp": 1557474000. "password": "asd", "member": 2}}
 ```
 
