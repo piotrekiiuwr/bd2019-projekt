@@ -256,7 +256,7 @@ Atrybuty zwracanych krotek, krotki muszą być posortowane wg `<member>` rosnąc
 trolls <timestamp>
 ```
 
-Zwraca listę wszystkich użytkowników, którzy zaproponowali akcje mające w chwili <timestamp> sumarycznie więcej downvotes niż upvotes. Z wstępnych badań wynika, że ranking trolli będzie bardzo często używaną funkcją, zaprojektuj bazę tak aby ta funkcja działała szybko.
+Zwraca listę wszystkich użytkowników, którzy zaproponowali akcje mające w chwili `<timestamp>` sumarycznie więcej downvotes niż upvotes. Z wstępnych badań wynika, że ranking trolli będzie bardzo często używaną funkcją, zaprojektuj bazę tak aby ta funkcja działała szybko.
 
 Atrybuty zwracanych krotek, krotki muszą być posortowane wg wartości różnicy `<downvotes> - <upvotes>` malejąco, w drugiej kolejności wg `<member>` rosnąco, atrybut `<active>` to wartość "true"/"false" w zależności od tego czy dany członek zachowuje prawa członka.
 ```
