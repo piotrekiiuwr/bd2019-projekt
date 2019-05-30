@@ -98,7 +98,7 @@ Pierwsze uruchomienie (z parametrem `--init`):
 { "downvote": { "timestamp": 1557475703, "password": "abc", "member": 1, "action":500}}
 { "downvote": { "timestamp": 1557475704, "password": "abc", "member": 1, "action":600}}
 { "votes": { "timestamp": 1557475705, "password": "abc", "member": 1}}
-{ "trolls": { }}
+{ "trolls": { "timestamp": 1557477055 }}
 ```
 
 ###### Oczekiwane wyjście (dla czytelności zawiera znaki nowej linii, pierwsza linia powtarza się 6 razy)
@@ -128,7 +128,7 @@ Identyfikatory `<member>`, `<action>`, `<project>`, `<authority>` są typu numbe
 
 Wartość `<password>` jest typu string, jej długość nie przekracza 128 znaków.
 
-Wartość `<timestamp>` jest typu number i reprezentuje UNIX timestamp. Gwarantowane jest, że wszystkie wywołania będą podane na wejściu w kolejności rosnących timestampów.
+Wartość `<timestamp>` jest typu number i reprezentuje UNIX timestamp. **Gwarantowane jest, że wszystkie wywołania będą podane na wejściu w kolejności rosnących timestampów.**
 
 Argumenty funkcji w nawiasach `[ ]` są opcjonalne (tzn. nie muszą być podane w wywołaniu funkcji).
 
@@ -253,10 +253,10 @@ Atrybuty zwracanych krotek, krotki muszą być posortowane wg `<member>` rosnąc
 ###### trolls
 
 ```
-trolls (funkcja bez parametrów)
+trolls <timestamp>
 ```
 
-Zwraca listę wszystkich użytkowników, którzy zaproponowali akcje mające w tej chwili sumarycznie więcej downvotes niż upvotes. Z wstępnych badań wynika, że ranking trolli będzie bardzo często używaną funkcją, zaprojektuj bazę tak aby ta funkcja działała szybko.
+Zwraca listę wszystkich użytkowników, którzy zaproponowali akcje mające w chwili <timestamp> sumarycznie więcej downvotes niż upvotes. Z wstępnych badań wynika, że ranking trolli będzie bardzo często używaną funkcją, zaprojektuj bazę tak aby ta funkcja działała szybko.
 
 Atrybuty zwracanych krotek, krotki muszą być posortowane wg wartości różnicy `<downvotes> - <upvotes>` malejąco, w drugiej kolejności wg `<member>` rosnąco, atrybut `<active>` to wartość "true"/"false" w zależności od tego czy dany członek zachowuje prawa członka.
 ```
