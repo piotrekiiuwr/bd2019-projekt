@@ -79,7 +79,7 @@ Pierwsze uruchomienie (z parametrem `--init`):
 ```
 { "open": { "database": "student", "login": "init", "password": "qwerty"}}
 { "leader": { "timestamp": 1557473000, "password": "abc", "member": 1}}
-{ "leader": { "timestamp": 1557474000. "password": "asd", "member": 2}}
+{ "leader": { "timestamp": 1557474000, "password": "asd", "member": 2}}
 ```
 
 ###### Oczekiwane wyjście
