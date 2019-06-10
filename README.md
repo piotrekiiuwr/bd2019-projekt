@@ -1,7 +1,7 @@
 Specyfikacja projektu do przedmiotu BD2019 prowadzonego w Instytucie Informatyki UWr znajduje się w pliku https://github.com/piotrekiiuwr/bd2019-projekt/blob/master/projekt.md
 
 # Testy
-W katalogu `testy` umieściłem przykładowe testy (z opisu projektu). Zachęcam Was do wrzucania tam swoich własnych testów oraz wyników zwracanych przez Wasze implementacje. Będę akceptował pull-requsty bez dokladniejszej weryfikacji. Proszę o przestrzegania konwencji dotyczącej nazw - nazwa pliku z testem do uruchomienia z parametrem `--init` powinna zawierać słowo `init`, nazwa pliku z testem powinna pasować do `*.in.json`, plik z odpowiedzią na test powinien mieć tę samą nazwę co test i pasować do `*.out.json`. W przypadku gdyby ktoś wygenerował więcej testów proszę o wrzucenie ich w osobnym podkatalogu.  
+W katalogu `testy` umieściłem przykładowe testy (z opisu projektu). Zachęcam Was do wrzucania tam swoich własnych testów oraz wyników zwracanych przez Wasze implementacje. Będę akceptował pull-requesty bez dokladniejszej weryfikacji. Proszę o przestrzegania konwencji dotyczącej nazw - nazwa pliku z testem do uruchomienia z parametrem `--init` powinna zawierać słowo `init`, nazwa pliku z testem powinna pasować do `*.in.json`, plik z odpowiedzią na test powinien mieć tę samą nazwę co test i pasować do `*.out.json`. W przypadku gdyby ktoś wygenerował więcej testów proszę o wrzucenie ich w osobnym podkatalogu.  
 
 # Zgłaszanie uwag do projektu zakończone
 
